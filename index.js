@@ -69,7 +69,7 @@ if (hacker1 < hacker2) {
 }
 
 /* bonus 1 */
-
+/* This was the version that I had to google to see how to also count with "," after et. */
 let longText = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem diam, auctor vel tempor ac, tempus quis ipsum. Duis sit amet varius neque, eu sagittis risus. Sed hendrerit orci id auctor pulvinar. Fusce nisi eros, consequat eu vulputate sed, bibendum ac metus. Proin turpis velit, rutrum vel dolor ac, consequat rutrum massa. Nullam porta lacus vel enim semper imperdiet. Aenean ac sollicitudin nisi.
 
@@ -92,3 +92,29 @@ for (let i = 0; i < words.length; i++) {
 console.log("Number of words:", wordCount);
 console.log("Number of occurrences of 'et':", etCount);
 
+/* Version that counted just 2 of them */
+
+let longText = `
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem diam, auctor vel tempor ac, tempus quis ipsum. Duis sit amet varius neque, eu sagittis risus. Sed hendrerit orci id auctor pulvinar. Fusce nisi eros, consequat eu vulputate sed, bibendum ac metus. Proin turpis velit, rutrum vel dolor ac, consequat rutrum massa. Nullam porta lacus vel enim semper imperdiet. Aenean ac sollicitudin nisi.
+
+Cras gravida enim id vestibulum fermentum. Vivamus eu magna felis. Pellentesque non elit blandit, lacinia justo ut, sagittis elit. Donec imperdiet orci porta massa dignissim condimentum. Sed ut fringilla odio. Sed sit amet erat ultrices leo vestibulum cursus. Phasellus volutpat mattis nunc non consequat. Cras eros tellus, tincidunt et porta et, rhoncus quis nibh. Duis dapibus dui sed tincidunt eleifend. Vestibulum eu arcu enim. Etiam ut dolor finibus, dignissim nunc ut, feugiat justo. In eleifend lectus lacus.
+
+Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam imperdiet sem lacus, eget vestibulum sapien iaculis id. Morbi eget egestas risus. Donec consequat ipsum suscipit augue elementum finibus quis in ex. Quisque elementum at ex sed lobortis. Suspendisse luctus tempus dapibus. Donec lacinia odio ac leo euismod aliquet. Nam auctor lobortis odio, non scelerisque magna volutpat id. Cras eros ipsum, dictum vitae ex at, sodales pharetra magna. Mauris mollis, purus vel varius tempor, dui felis tincidunt ligula, a eleifend diam dolor sit amet turpis. Quisque dignissim egestas nibh at vestibulum. Pellentesque facilisis purus non sem blandit, a tempor diam egestas. Curabitur maximus tortor vitae tellus placerat, id tincidunt leo viverra. Quisque pharetra, lectus non laoreet suscipit, nisi mi porttitor purus, quis fermentum sapien enim vel tellus. Nulla cursus nisl in tellus finibus, eu commodo tellus ornare. Donec ultrices, turpis a sodales luctus, tellus dui rhoncus eros, quis congue elit erat eu odio. `;
+
+
+let wordsArray = text.split(" ");
+
+let numberOfWords = wordsArray.length;
+
+let etCount = 0;
+
+for (let i = 0; i < wordsArray.length; i++) {
+  if (wordsArray[i].toLowerCase() === "et") {
+    etCount++;
+  }
+}
+
+console.log("Number of times 'et' appears:", etCount);
+
+console.log("Number of words:", numberOfWords);
+*/
